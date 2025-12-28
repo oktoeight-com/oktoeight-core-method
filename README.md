@@ -28,7 +28,7 @@ By scoring on independent axes, we identify:
 
 ## The CORE Framework
 
-CORE stands for:
+CORE stands for **C**onfidence, **O**utcome, **R**eturn, and **E**ffort. These four attributes are detailed in the following structure:
 
 | Attribute | Question | Focus |
 |-----------|----------|-------|
@@ -37,18 +37,17 @@ CORE stands for:
 | **R**eturn | *Is it profitable?* | Financial ROI and efficiency score. |
 | **E**ffort | *What does it cost?* | Actual resource time in Work Days. |
 
-## Assessment Pillars
+### Archetype Assignment (Recommended)
 
-The CORE Method evaluates projects through three primary lenses.
+To allow for objective scoring, we recommend assigning specific **Archetypes** to ownership of each attribute. While this increases accuracy, it is optional if these specific roles are not available.
 
-| Pillar | Focus | Dimensions | Archetype Suggestion |
-|--------|-------|------------|----------------------|
-| **Feasibility** | *Can we do it?* | **Confidence** (Technical) | Tech Lead, Senior Engineer |
-| **Value** | *Should we do it?* & *Is it profitable?* | **Outcome** (Strategy) + **Return** (Economy) | Product Manager, Strategist, CFO |
-| **Effort** | *What does it cost?* | **Effort** (Execution) | Project Manager, Team Lead |
+*   **Confidence:** Tech Lead / Senior Engineer
+*   **Outcome:** Product Manager / Strategist
+*   **Return:** CFO / Business Analyst
+*   **Effort:** Project Manager / Team Lead
 
 ### Verification
-A final **Integrity Check** (Validator) is performed to ensure data consistency. Specifically, `Duration` must satisfy the minimum constraints of `Work Days` and `FTE` allocation.
+A final **Integrity Check** is performed to ensure data consistency. Specifically, `Duration` must satisfy the minimum constraints of `Work Days` and `FTE` allocation.
 
 ## Data Structure
 
@@ -57,38 +56,29 @@ The CORE Method relies on a **Dual-Ledger** system: two flat CSV files.
 ### 1. Project Assessment (`project-assessment.csv`)
 The single source of truth for all projects.
 
-#### Identity & Scope
-| Column | Description |
-|--------|-------------|
-| **Title** | Unique identifier (e.g., "OKTO-1001"). |
-| **Description** | Brief summary (2-3 sentences). |
-| **Owner** | Full Name of the person responsible (e.g., "Albert Leris"). |
-| **Status** | `Draft`, `Scheduled`, `Ongoing`, `Completed`, `On Hold`. |
-| **Conclusion** | Final verdict (`Viable`, `Conditional`, `Not Recommended`) + brief reasoning (2-3 sentences). |
-
-#### CORE Scoring (Rubric 1-5)
-| Column | Description | Scoring Legend |
-|--------|-------------|----------------|
-| **Confidence Score** | Technical Feasibility. | **5:** Routine/Done before.<br>**3:** Some unknowns.<br>**1:** High risk/New tech. |
-| **Outcome Score** | Strategic Impact. | **5:** Critical/Compliance.<br>**3:** Strong feature.<br>**1:** Nice to have. |
-
-#### Resources & Finance
-| Column | Description | Math / Notes |
-|--------|-------------|--------------|
-| **Work Days** | Total effort required (Man-days). | *Payroll Driver.* |
-| **Required FTE** | Intensity of resource allocation. | e.g., `0.5` (half speed), `2.0` (two people). |
-| **Duration** | Calendar days to delivery. | Formula: `(Work Days / FTE) + Wait Time + Weekends`. |
-| **Total Cost** | Full cost (Labor + Direct). | `(Work Days * Blended Daily Rate) + External Costs`. |
-| **Monthly Benefit** | Expected monthly value (post-launch). | Revenue increase or Cost savings. |
+| Column | Description | Comments |
+|--------|-------------|----------|
+| **Title** | Unique identifier. | e.g., "OKTO-1001" |
+| **Description** | Brief summary. | 2-3 sentences. |
+| **Owner** | Full Name of responsible person. | e.g., "Albert Leris" |
+| **Status** | Project state. | `Draft`, `Scheduled`, `Ongoing`, `Completed`, `On Hold` |
+| **Conclusion** | Final verdict + reasoning. | `Viable`, `Conditional`, `Not Recommended` |
+| **Confidence Score** | Technical Feasibility (1-5). | **5:** Routine, **3:** Unknowns, **1:** High Risk |
+| **Outcome Score** | Strategic Impact (1-5). | **5:** Critical, **3:** Strong Feature, **1:** Nice to have |
+| **Work Days** | Total effort required (Man-days). | *Payroll Driver* |
+| **Required FTE** | Intensity of resource allocation. | e.g., `0.5` (half speed), `2.0` (two people) |
+| **Duration** | Calendar days to delivery. | Formula: `(Work Days / FTE) + Wait Time + Weekends` |
+| **Total Cost** | Full cost (Labor + Direct). | `(Work Days * Blended Daily Rate) + External Costs` |
+| **Monthly Benefit** | Expected monthly value. | Revenue increase or Cost savings post-launch |
 
 ### 2. Resource Capacity Ledger (`available-resource.csv`)
 Tracks the monthly available FTE capacity to ensure realistic scheduling.
 
-| Column | Description | Example |
-|--------|-------------|---------|
-| **Month** | First day of the month (dd.mm.yyyy). | `01.05.2026` |
-| **Available FTE** | Total capacity including planned changes. | `3.5` |
-| **Comment** | Explanation of capacity sources. | `Product Manager + 2 Engineers` |
+| Column | Description | Comments |
+|--------|-------------|----------|
+| **Month** | First day of the month. | Format: `dd.mm.yyyy` (e.g., 01.05.2026) |
+| **Available FTE** | Total capacity including planned changes. | Decimal format (e.g., `3.5` for 3 full-time + 1 part-time) |
+| **Comment** | Explanation of capacity sources. | e.g., "Product Manager + 2 Engineers" |
 
 ## Scoring Logic
 
