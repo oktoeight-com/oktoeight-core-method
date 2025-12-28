@@ -7,7 +7,7 @@ The CORE Method is a universal project prioritization and resource planning fram
 We believe complexity is the enemy of execution. CORE is built on two immutable tenets:
 
 1.  **Plain Text over Software as a Service (SaaS):** Decisions should be recorded in portable, universal formats, such as *.Comma-Separated Values (CSV), *.Markdown (MD), or even pen and paper. Not locked in proprietary tools.
-2.  **Return over Abstraction:** We prioritize tangible financial outcomes over abstract complexity points (e.g., Story Points, Fibonacci estimates).
+2.  **Return over Abstraction:** We prioritize tangible financial outcomes over abstract complexity points (e.g., magic numbers or subjective scores).
 
 ## Why CORE?
 
