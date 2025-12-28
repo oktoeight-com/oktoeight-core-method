@@ -6,15 +6,15 @@ The CORE Method is a universal project prioritization and resource planning fram
 
 We believe complexity is the enemy of execution. CORE is built on two immutable tenets:
 
-1.  **Plain Text over SaaS:** Decisions should live in portable, universal formats (CSV/Markdown), not locked in proprietary tools.
-2.  **Return over Abstraction:** We prioritize tangible financial outcomes over abstract complexity points.
+1.  **Plain Text over Software as a Service (SaaS):** Decisions should be recorded in portable, universal formats, such as *.Comma-Separated Values (CSV), *.Markdown (MD), or even pen and paper. Not locked in proprietary tools.
+2.  **Return over Abstraction:** We prioritize tangible financial outcomes over abstract complexity points (e.g., Story Points, Fibonacci estimates).
 
 ## Why CORE?
 
 Standard frameworks often collapse variables into a single abstract number. CORE uses a **Tension Model** to expose trade-offs:
 
 * **Strategy (Outcome):** Should we do it? (Brand/Compliance)
-* **Finance (Return):** Is it profitable? (ROI/Efficiency)
+* **Finance (Return):** Is it profitable? (Return on Investment (ROI)/Efficiency)
 * **Technical (Confidence):** Can we do it? (Feasibility/Risk)
 
 By scoring on independent axes, we identify:
@@ -50,11 +50,11 @@ To allow for objective scoring, we recommend assigning specific **Archetypes** t
 
 *   **Confidence:** Tech Lead / Senior Engineer
 *   **Outcome:** Product Manager / Strategist
-*   **Return:** CFO / Business Analyst
+*   **Return:** Chief Financial Officer (CFO) / Business Analyst
 *   **Effort:** Project Manager / Team Lead
 
 ### Verification
-A final **Integrity Check** is performed to ensure data consistency. Specifically, `Duration` must satisfy the minimum constraints of `Work Days` and `FTE` allocation.
+A final **Integrity Check** is performed to ensure data consistency. Specifically, `Duration` must satisfy the minimum constraints of `Work Days` and `Full-Time Equivalent (FTE)` allocation.
 
 ## Data Structure
 
@@ -92,13 +92,13 @@ Tracks the monthly available FTE capacity to ensure realistic scheduling.
 The CORE Method uses specific calculations to drive objective prioritization.
 
 ### 1. Project Score (Strategic Fit)
-`Confidence Score + Outcome Score = Project Score (Max 10)`
+`Project Score = Confidence Score + Outcome Score`
 
 * **Focus:** Identifies projects that are both strategically critical and safe to execute.
 * **Goal:** Score > 7.
 
 ### 2. Efficiency Score (Return)
-`((Monthly Benefit * 36) - Total Cost) / Work Days = Efficiency Score`
+`Efficiency Score = ((Monthly Benefit * 36) - Total Cost) / Work Days`
 
 * **Focus:** Return per Day of Effort.
 * **The "36" Constant:** We standardize on a **36-Month Value Horizon**. This is a tangible duration to evaluate outcome and savings without worrying about replacement by new technologies.
@@ -112,6 +112,22 @@ Before scheduling, verify the relationship between effort and time:
 * **Logic:** `Work Days` are the actual days of labor. `Duration` is the timeline (including waiting).
 * **Example:** If a project needs **10 Work Days** but you only allocate **0.5 FTE**, the minimum Duration is **20 Days**.
 * **Note:** Duration is usually *higher* than the raw math suggests due to weekends and external waiting, but it can never be *lower*.
+
+## Abbreviations
+
+| Abbreviation | Definition |
+|--------------|------------|
+| **CFO** | Chief Financial Officer |
+| **CORE** | Confidence, Outcome, Return, Effort |
+| **CSV** | Comma-Separated Values |
+| **FTE** | Full-Time Equivalent |
+| **ICE** | Impact, Confidence, Ease |
+| **MD** | Markdown |
+| **MoSCoW** | Must have, Should have, Could have, Won't have |
+| **RICE** | Reach, Impact, Confidence, Effort |
+| **ROI** | Return on Investment |
+| **SaaS** | Software as a Service |
+| **WSJF** | Weighted Shortest Job First |
 
 ## Contributing
 
