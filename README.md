@@ -43,8 +43,8 @@ The CORE Method evaluates projects through three primary lenses.
 
 | Pillar | Focus | Dimensions | Archetype Suggestion |
 |--------|-------|------------|----------------------|
-| **Value** | *Should we do it?* & *Is it profitable?* | **Outcome** (Strategy) + **Return** (Economy) | Product Manager, Strategist, CFO |
 | **Feasibility** | *Can we do it?* | **Confidence** (Technical) | Tech Lead, Senior Engineer |
+| **Value** | *Should we do it?* & *Is it profitable?* | **Outcome** (Strategy) + **Return** (Economy) | Product Manager, Strategist, CFO |
 | **Effort** | *What does it cost?* | **Effort** (Execution) | Project Manager, Team Lead |
 
 ### Verification
@@ -60,10 +60,11 @@ The single source of truth for all projects.
 #### Identity & Scope
 | Column | Description |
 |--------|-------------|
-| **Title** | Unique identifier (e.g., "FP-4100"). |
+| **Title** | Unique identifier (e.g., "OKTO-1001"). |
 | **Description** | Brief summary (2-3 sentences). |
+| **Owner** | Full Name of the person responsible (e.g., "Albert Leris"). |
 | **Status** | `Draft`, `Scheduled`, `Ongoing`, `Completed`, `On Hold`. |
-| **Conclusion** | `Viable`, `Conditional`, `Not Recommended`. |
+| **Conclusion** | Final verdict (`Viable`, `Conditional`, `Not Recommended`) + brief reasoning (2-3 sentences). |
 
 #### CORE Scoring (Rubric 1-5)
 | Column | Description | Scoring Legend |
