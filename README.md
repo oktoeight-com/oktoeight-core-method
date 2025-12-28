@@ -1,8 +1,8 @@
-# Oktoeight CORE Method
+# The CORE Method
 
 ## Introduction
 
-The Oktoeight CORE Method is a universal project prioritization and resource planning framework. It is a minimalist philosophy for decision-making that prioritizes technical confidence, strategic outcome, and financial return.
+The CORE Method is a universal project prioritization and resource planning framework. It is a minimalist philosophy for decision-making that prioritizes technical confidence, strategic outcome, and financial return.
 
 ## Core Philosophy
 
@@ -24,7 +24,16 @@ By scoring on independent axes, we identify:
 * **Ideal Project:** High Outcome / High Return.
 * **Strategic Necessity:** High Outcome / Low Return (Compliance).
 * **Cash Cow:** Low Outcome / High Return (Pure Profit).
-* **Avoid:** Low Outcome / Low Return.
+*   **Avoid:** Low Outcome / Low Return.
+
+### vs. The Alternatives
+
+| Framework | Focus | Blind Spot | CORE Solution |
+|-----------|-------|------------|---------------|
+| **MoSCoW** | Requirements Scope | Ignores profitability/ROI. | Explicit **Return** metric. |
+| **RICE** | Prioritization Score | Blends risk & value into one number. | Separates **Confidence** from **Outcome**. |
+| **ICE** | Speed / Growth | "Impact" is subjective/vanity. | Splits Impact: **Outcome** (Strategy) vs **Return** (Cash). |
+| **WSJF** | Cost of Delay | Abstract math; guesswork. | Concrete **Efficiency Score** ($ per Day). |
 
 ## The CORE Framework
 
