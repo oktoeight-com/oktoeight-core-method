@@ -1,7 +1,5 @@
 # The CORE Method
 
-## Introduction
-
 The CORE Method is a universal project prioritization and resource planning framework. It is a minimalist philosophy for decision-making that prioritizes technical confidence, strategic outcome, and financial return.
 
 ## Core Philosophy
