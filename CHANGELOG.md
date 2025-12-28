@@ -12,6 +12,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 - Reordered "Assessment Pillars" in README to match the CORE acronym (Confidence, Outcome, Return, Effort).
 - Updated "Conclusion" field definition to include a brief reasoning summary.
+- Consolidated "CORE Framework" and "Assessment Pillars" into a single, unified table in README.
+- Added "Archetype Assignment" guidelines to RECOMMENDED strategies in README.
+- Consolidated "Project Assessment" data structure into a single unified table in README.
 
 ## [0.1.0] - 2025-12-28
 
