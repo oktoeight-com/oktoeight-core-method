@@ -11,7 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 - Expanded acronyms (CSV, MD, CFO, FTE) on their first occurrence in README.
-- Clarified "abstract complexity points" in Core Philosophy to include examples (e.g., Story Points, Fibonacci estimates).
+- Clarified "abstract complexity points" in Core Philosophy to include examples (e.g., magic numbers or subjective scores).
 
 ## [0.1.0] - 2025-12-28
 
