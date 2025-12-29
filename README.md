@@ -74,9 +74,11 @@ The single source of truth for all projects.
 | **Outcome Score** | Strategic Impact (1-5). | **5:** Critical, **3:** Strong Feature, **1:** Nice to have |
 | **Work Days** | Total effort required (Man-days). | *Payroll Driver* |
 | **Required FTE** | Intensity of resource allocation. | e.g., `0.5` (half speed), `2.0` (two people) |
-| **Duration** | Calendar days to delivery. | Formula: `(Work Days / FTE) + Wait Time + Weekends` |
+| **Duration** | Calendar days to delivery. | `(Work Days / FTE) + Wait Time + Weekends` |
 | **Total Cost** | Full cost (Labor + Direct). | `(Work Days * Blended Daily Rate) + External Costs` |
 | **Monthly Benefit** | Expected monthly value. | Revenue increase or Cost savings post-launch |
+| **Project Score** | Strategic Fit Sum. | `Confidence Score + Outcome Score` |
+| **Efficiency Score** | Financial Return per Day. | `((Monthly Benefit * 36) - Total Cost) / Work Days` |
 
 ### 2. Resource Capacity Ledger (`available-resource.csv`)
 Tracks the monthly available FTE capacity to ensure realistic scheduling.
