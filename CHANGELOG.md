@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Added
 - Abbreviations chapter to README.
+- Project Score and Efficiency Score metrics to README.
 
 ### Changed
 - Expanded acronyms (CSV, MD, CFO, FTE) on their first occurrence in README.
