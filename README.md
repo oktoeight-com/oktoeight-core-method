@@ -53,7 +53,7 @@ To allow for objective scoring, we recommend assigning specific **Archetypes** t
 *   **Return:** Chief Financial Officer (CFO) / Business Analyst
 *   **Effort:** Project Manager / Team Lead
 
-### Verification
+### Integrity Check
 A final **Integrity Check** is performed to ensure data consistency. Specifically, `Duration` must satisfy the minimum constraints of `Work Days` and `Full-Time Equivalent (FTE)` allocation.
 
 ## Data Structure
@@ -72,6 +72,7 @@ The single source of truth for all projects.
 | **Conclusion** | Final verdict + reasoning. | `Viable`, `Conditional`, `Not Recommended` |
 | **Confidence Score** | Technical Feasibility (1-5). | **5:** Routine, **3:** Unknowns, **1:** High Risk |
 | **Outcome Score** | Strategic Impact (1-5). | **5:** Critical, **3:** Strong Feature, **1:** Nice to have |
+| **Urgency Score** | Time Sensitivity Multiplier. | **2.0:** Critical Deadline, **1.0:** Standard, **0.5:** Deferrable |
 | **Work Days** | Total effort required (Man-days). | *Payroll Driver* |
 | **Required FTE** | Intensity of resource allocation. | e.g., `0.5` (half speed), `2.0` (two people) |
 | **Duration** | Calendar days to delivery. | `(Work Days / FTE) + Wait Time + Weekends` |
@@ -94,10 +95,10 @@ Tracks the monthly available FTE capacity to ensure realistic scheduling.
 The CORE Method uses specific calculations to drive objective prioritization.
 
 ### 1. Project Score (Strategic Fit)
-`Project Score = Confidence Score + Outcome Score`
+`Project Score = (Confidence Score + Outcome Score) * Urgency Score`
 
 * **Focus:** Identifies projects that are both strategically critical and safe to execute.
-* **Goal:** Score > 7.
+* **Goal:** Score > 10.
 
 ### 2. Efficiency Score (Return)
 `Efficiency Score = ((Monthly Benefit * 36) - Total Cost) / Work Days`
@@ -114,6 +115,23 @@ Before scheduling, verify the relationship between effort and time:
 * **Logic:** `Work Days` are the actual days of labor. `Duration` is the timeline (including waiting).
 * **Example:** If a project needs **10 Work Days** but you only allocate **0.5 FTE**, the minimum Duration is **20 Days**.
 * **Note:** Duration is usually *higher* than the raw math suggests due to weekends and external waiting, but it can never be *lower*.
+
+## Common Questions
+
+*   **"What if I don't have a CFO?"**
+    *   Assign the "Return" attribute to the business stakeholder closest to the money. The goal is logical consistency, not forensic accounting accuracy.
+
+*   **"Why is Urgency a multiplier?"**
+    *   To prevent "Urgency Bias." If we just added points, a useless project (Outcome 1) due tomorrow (+5) would beat a strategic game-changer (Outcome 5) due next month (+1). Multiplication ensures that zero-value projects remain zero, regardless of the deadline.
+
+*   **"What if I am a solo entrepreneur?"**
+    *   You are all the Archetypes. However, you must score "Return" while wearing your "Business Owner" hat, strictly separating it from your "Engineer" excitement (Confidence) or "Product" vision (Outcome).
+
+*   **"Why plain text (CSV)?"**
+    *   Complexity prevents transparency. Proprietary tools hide logic behind paywalls. CSVs are universal, version-controllable, and force focus on the data, not the tool.
+
+*   **"Can I add more columns?"**
+    *   The core philosophy is minimalism. Every new column dilutes the decision. If you must, ensure it drives the decision, not just describes the project.
 
 ## Abbreviations
 
