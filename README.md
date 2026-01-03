@@ -11,7 +11,7 @@ We believe complexity is the enemy of execution. CORE is built on two immutable 
 
 ## Why CORE?
 
-Standard frameworks often collapse variables into a single abstract number. CORE uses a **Tension Model** to expose trade-offs:
+Standard frameworks collapse variables into a single abstract number. CORE uses a **Tension Model** to expose trade-offs:
 
 * **Strategy (Outcome):** Should we do it? (Brand/Compliance)
 * **Finance (Return):** Is it profitable? (Return on Investment (ROI)/Efficiency)
@@ -53,10 +53,9 @@ To allow for objective scoring, we recommend assigning specific **Archetypes** t
 *   **Return:** Chief Financial Officer (CFO) / Business Analyst
 *   **Effort:** Project Manager / Team Lead
 
-### Integrity Check
-A final **Integrity Check** is performed to ensure data consistency. Specifically, `Duration` must satisfy the minimum constraints of `Work Days` and `Full-Time Equivalent (FTE)` allocation.
-
 ## Data Structure
+
+The CORE Method uses specific calculations to drive objective prioritization.
 
 The CORE Method relies on a **Dual-Ledger** system: two flat CSV files.
 
@@ -90,7 +89,7 @@ Tracks the monthly available FTE capacity to ensure realistic scheduling.
 | **Available FTE** | Total capacity including planned changes. | Decimal format (e.g., `3.5` for 3 full-time + 1 part-time) |
 | **Comment** | Explanation of capacity sources. | e.g., "Product Manager + 2 Engineers" |
 
-## Scoring Logic
+## Operating Logic
 
 The CORE Method uses specific calculations to drive objective prioritization.
 
@@ -115,6 +114,46 @@ Before scheduling, verify the relationship between effort and time:
 * **Logic:** `Work Days` are the actual days of labor. `Duration` is the timeline (including waiting).
 * **Example:** If a project needs **10 Work Days** but you only allocate **0.5 FTE**, the minimum Duration is **20 Days**.
 * **Note:** Duration is usually *higher* than the raw math suggests due to weekends and external waiting, but it can never be *lower*.
+
+## Implementation
+
+The CORE Method is tool-agnostic. It applies to any spreadsheet, database, or text file. The key is the **Project Assessment CSV**.
+
+### Example 1: Software (Migration)
+
+**Context:** Determine if we should migrate legacy Postgres to RDS.
+
+**CSV Entry:**
+
+| Column | Value | Notes |
+| :--- | :--- | :--- |
+| **Title** | `INFRA-2024-01` | |
+| **Confidence** | `4` | High, but some data risk. |
+| **Outcome** | `4` | Critical for scaling. |
+| **Urgency** | `1.0` | Standard. |
+| **Work Days** | `20` | 2 Eng * 2 Weeks. |
+| **Total Cost** | `10,000` | Labor. |
+| **Monthly Benefit** | `1,000` | Maintenance savings. |
+| **Project Score** | **8.0** | (4+4)*1 |
+| **Efficiency Score** | **1,300** | ((1000*36)-10000)/20 |
+
+### Example 2: Hardware (New Machine)
+
+**Context:** Purchase new 5-Axis CNC to replace failing unit.
+
+**CSV Entry:**
+
+| Column | Value | Notes |
+| :--- | :--- | :--- |
+| **Title** | `CAPEX-9921` | |
+| **Confidence** | `5` | Vendor installation. |
+| **Outcome** | `5` | Line 4 is down without it. |
+| **Urgency** | `1.0` | Standard. |
+| **Work Days** | `5` | Install time. |
+| **Total Cost** | `150,000` | Asset + Install. |
+| **Monthly Benefit** | `5,000` | Production increase. |
+| **Project Score** | **10.0** | (5+5)*1 |
+| **Efficiency Score** | **6,000** | ((5000*36)-150000)/5 |
 
 ## Common Questions
 
