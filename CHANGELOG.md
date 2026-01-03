@@ -7,10 +7,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 ### Added
+- "Urgency Score" to Project Assessment.
+- "Common Questions" section to README.
+- Implementation examples for "Software (Migration)" and "Hardware (New Machine)".
 - Abbreviations chapter to README.
 - Project Score and Efficiency Score metrics to README.
 
 ### Changed
+- Renamed "Scoring Logic" to "Operating Logic".
+- Updated "Project Score" calculation to include Urgency Score multiplier.
 - Expanded acronyms (CSV, MD, CFO, FTE) on their first occurrence in README.
 - Clarified "abstract complexity points" in Core Philosophy to include examples (e.g., magic numbers or subjective scores).
 
