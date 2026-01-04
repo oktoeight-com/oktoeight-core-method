@@ -8,30 +8,24 @@ We believe complexity is the enemy of execution. CORE is built on two immutable 
 
 1.  **Plain Text over Software as a Service (SaaS):** Decisions should be recorded in portable, universal formats, such as *.Comma-Separated Values (CSV), *.Markdown (MD), or even pen and paper. Not locked in proprietary tools.
 2.  **Return over Abstraction:** We prioritize tangible financial outcomes over abstract complexity points (e.g., magic numbers or subjective scores).
+3.  **Calculated over Subjective:** Decisions must be rooted in verifiable math and data, not intuition or internal politics.
 
 ## Why CORE?
 
-Standard frameworks collapse variables into a single abstract number. CORE uses a **Tension Model** to expose trade-offs:
+Standard frameworks collapse variables into a single abstract number. CORE uses a **Tension Model** to expose trade-offs.
 
-* **Strategy (Outcome):** Should we do it? (Brand/Compliance)
-* **Finance (Return):** Is it profitable? (Return on Investment (ROI)/Efficiency)
-* **Technical (Confidence):** Can we do it? (Feasibility/Risk)
-
-By scoring on independent axes, we identify:
-
-* **Ideal Project:** High Outcome / High Return.
-* **Strategic Necessity:** High Outcome / Low Return (Compliance).
-* **Cash Cow:** Low Outcome / High Return (Pure Profit).
-*   **Avoid:** Low Outcome / Low Return.
+| Approach | Statement | Impact |
+| :--- | :--- | :--- |
+| **Gut Feel** | "I think this is a good idea." | Subjective bias; HiPPO decisions. |
+| **CORE Method** | "This has High Return and High Confidence." | Objective, calculated prioritization. |
 
 ### vs. The Alternatives
 
 | Framework | Focus | Blind Spot | CORE Solution |
 |-----------|-------|------------|---------------|
-| **MoSCoW** | Requirements Scope | Ignores profitability/ROI. | Explicit **Return** metric. |
-| **RICE** | Prioritization Score | Blends risk & value into one number. | Separates **Confidence** from **Outcome**. |
-| **ICE** | Speed / Growth | "Impact" is subjective/vanity. | Splits Impact: **Outcome** (Strategy) vs **Return** (Cash). |
-| **WSJF** | Cost of Delay | Abstract math; guesswork. | Concrete **Efficiency Score** ($ per Day). |
+| **MoSCoW** | Requirements Scope (MoSCoW) | Ignores profitability/ROI. | Explicit **Return** metric. |
+| **RICE** | Prioritization Score (RICE) | Blends risk & value into one number. | Separates **Confidence** from **Outcome**. |
+| **WSJF** | Cost of Delay (WSJF) | Abstract math; guesswork. | Concrete **Efficiency Score** ($ per Day). |
 
 ## The CORE Framework
 
@@ -39,25 +33,49 @@ CORE stands for **C**onfidence, **O**utcome, **R**eturn, and **E**ffort. These f
 
 | Attribute | Question | Focus |
 |-----------|----------|-------|
-| **C**onfidence | *Can we do it?* | Technical feasibility, risk, and competency. |
-| **O**utcome | *Should we do it?* | Strategic value, safety, compliance, and brand. |
-| **R**eturn | *Is it profitable?* | Financial ROI and efficiency score. |
-| **E**ffort | *What does it cost?* | Actual resource time in Work Days. |
+| **C**onfidence | *Can we do it?* | Feasibility, risk, competency. |
+| **O**utcome | *Should we do it?* | Strategy, safety, compliance. |
+| **R**eturn | *Is it profitable?* | ROI, efficiency, cash. |
+| **E**ffort | *What does it cost?* | Labor, days, budget. |
 
-### Archetype Assignment (Recommended)
+### Responsibility Model
 
-To allow for objective scoring, we recommend assigning specific **Archetypes** to ownership of each attribute. While this increases accuracy, it is optional if these specific roles are not available.
+| Role | Responsibility |
+| :--- | :--- |
+| **Confidence** | Tech Lead / Senior Engineer |
+| **Outcome** | Product Manager / Strategist |
+| **Return** | CFO / Business Analyst |
+| **Effort** | Project Manager / Team Lead |
 
-*   **Confidence:** Tech Lead / Senior Engineer
-*   **Outcome:** Product Manager / Strategist
-*   **Return:** Chief Financial Officer (CFO) / Business Analyst
-*   **Effort:** Project Manager / Team Lead
+## Operating Logic
+
+The CORE Method uses specific calculations to drive objective prioritization.
+
+### 1. Project Score (Strategic Fit)
+`Project Score = (Confidence Score + Outcome Score) * Urgency Score`
+
+* **Focus:** Identifies projects that are both strategically critical and safe to execute.
+* **Goal:** Score > 10.
+
+### 2. Efficiency Score (Return)
+`Efficiency Score = ((Monthly Benefit * 36) - Total Cost) / Work Days`
+
+* **Focus:** Return per Day of Effort.
+* **The "36" Constant:** We standardize on a **36-Month Value Horizon**. This is a tangible duration to evaluate outcome and savings without worrying about replacement by new technologies.
+* **Goal:** Identifying "Cash Cows" (High Efficiency) regardless of strategic "sexiness."
+
+### The CORE Integrity Check
+Before finalizing the prioritization, perform the following check:
+
+* **If Strategy (Outcome) is "Avoid" and Return is Low:** The project is a distraction. Do not execute.
+* **If Duration < (Work Days / Required FTE):** The timeline is physically impossible. Adjust either the scope, the labor, or the deadline.
+* **If Work Days are unknown:** The "Confidence" score is a guess. Move the project back to the research phase.
 
 ## Data Structure
 
 The CORE Method uses specific calculations to drive objective prioritization.
 
-The CORE Method relies on a **Dual-Ledger** system: two flat CSV files.
+The CORE Method relies on **The CORE Data Object (Dual-Ledger)**: two flat CSV files.
 
 ### 1. Project Assessment (`project-assessment.csv`)
 The single source of truth for all projects.
@@ -88,32 +106,6 @@ Tracks the monthly available FTE capacity to ensure realistic scheduling.
 | **Month** | First day of the month. | Format: `dd.mm.yyyy` (e.g., 01.05.2026) |
 | **Available FTE** | Total capacity including planned changes. | Decimal format (e.g., `3.5` for 3 full-time + 1 part-time) |
 | **Comment** | Explanation of capacity sources. | e.g., "Product Manager + 2 Engineers" |
-
-## Operating Logic
-
-The CORE Method uses specific calculations to drive objective prioritization.
-
-### 1. Project Score (Strategic Fit)
-`Project Score = (Confidence Score + Outcome Score) * Urgency Score`
-
-* **Focus:** Identifies projects that are both strategically critical and safe to execute.
-* **Goal:** Score > 10.
-
-### 2. Efficiency Score (Return)
-`Efficiency Score = ((Monthly Benefit * 36) - Total Cost) / Work Days`
-
-* **Focus:** Return per Day of Effort.
-* **The "36" Constant:** We standardize on a **36-Month Value Horizon**. This is a tangible duration to evaluate outcome and savings without worrying about replacement by new technologies.
-* **Goal:** Identifying "Cash Cows" (High Efficiency) regardless of strategic "sexiness."
-
-### 3. The Duration Integrity Check
-Before scheduling, verify the relationship between effort and time:
-
-`Duration >= (Work Days / Required FTE)`
-
-* **Logic:** `Work Days` are the actual days of labor. `Duration` is the timeline (including waiting).
-* **Example:** If a project needs **10 Work Days** but you only allocate **0.5 FTE**, the minimum Duration is **20 Days**.
-* **Note:** Duration is usually *higher* than the raw math suggests due to weekends and external waiting, but it can never be *lower*.
 
 ## Implementation
 
@@ -180,7 +172,6 @@ The CORE Method is tool-agnostic. It applies to any spreadsheet, database, or te
 | **CORE** | Confidence, Outcome, Return, Effort |
 | **CSV** | Comma-Separated Values |
 | **FTE** | Full-Time Equivalent |
-| **ICE** | Impact, Confidence, Ease |
 | **MD** | Markdown |
 | **MoSCoW** | Must have, Should have, Could have, Won't have |
 | **RICE** | Reach, Impact, Confidence, Effort |
