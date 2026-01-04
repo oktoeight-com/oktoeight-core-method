@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-01-04
+
 ### Added
 - "Urgency Score" mechanism to the prioritization logic and Project Assessment.
 - "Project Score" and "Efficiency Score" fields to the Project Assessment.
@@ -24,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Expanded acronyms (CSV, MD, CFO, FTE) throughout the documentation.
 - Clarified "abstract complexity points" in Core Philosophy.
 - Overhauled `CONTRIBUTING.md` with strict documentation standards ("Power of Three", "Structural Blueprint", "Visual Identity").
+- Updated `LICENSE` to include the correct copyright year.
 
 ### Removed
 - "ICE" from the alternatives comparison.
