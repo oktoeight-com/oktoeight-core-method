@@ -23,6 +23,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Consolidated "Assessment Pillars" and "Archetype Assignment" into "Responsibility Model".
 - Expanded acronyms (CSV, MD, CFO, FTE) throughout the documentation.
 - Clarified "abstract complexity points" in Core Philosophy.
+- Overhauled `CONTRIBUTING.md` with strict documentation standards ("Power of Three", "Structural Blueprint", "Visual Identity").
 
 ### Removed
 - "ICE" from the alternatives comparison.
