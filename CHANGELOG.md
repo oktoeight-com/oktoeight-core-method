@@ -7,21 +7,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 ### Added
-- "Urgency Score" to Project Assessment.
-- "Common Questions" section to README.
-- Implementation examples for "Software (Migration)" and "Hardware (New Machine)".
-- Abbreviations chapter to README.
-- Project Score and Efficiency Score metrics to README.
+- "Urgency Score" mechanism to the prioritization logic and Project Assessment.
+- "Project Score" and "Efficiency Score" fields to the Project Assessment.
+- "Common Questions" section.
+- "Implementation" section with Software and Hardware examples.
+- "Abbreviations" section.
+- "Operating Logic" section detailing "Project Score" and "Efficiency Score" formulas.
+- "Responsibility Model" matrix for attribute ownership.
+- "Calculated over Subjective" principle to Core Philosophy.
+- "The CORE Integrity Check" section with expanded logic.
 
 ### Changed
-- Renamed "Scoring Logic" to "Operating Logic".
-- Updated "Project Score" calculation to include Urgency Score multiplier.
-- Expanded acronyms (CSV, MD, CFO, FTE) on their first occurrence in README.
-- Clarified "abstract complexity points" in Core Philosophy to include examples (e.g., magic numbers or subjective scores).
+- Refined "Why CORE?" section with a comparative approach table.
+- Updated "vs. The Alternatives" table comparisons and removed ICE.
+- Consolidated "Assessment Pillars" and "Archetype Assignment" into "Responsibility Model".
+- Expanded acronyms (CSV, MD, CFO, FTE) throughout the documentation.
+- Clarified "abstract complexity points" in Core Philosophy.
 
 ### Removed
-- Redundant "Integrity Check" section.
-
+- "ICE" from the alternatives comparison.
+- "The Duration Integrity Check" (replaced by consolidated CORE Integrity Check).
 
 ## [0.1.0] - 2025-12-28
 
