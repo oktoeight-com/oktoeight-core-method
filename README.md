@@ -4,7 +4,7 @@ The CORE Method is a universal project prioritization and resource planning fram
 
 ## Core Philosophy
 
-We believe complexity is the enemy of execution. CORE is built on two immutable tenets:
+We believe **"Complexity is the enemy of execution."** CORE is built on three immutable tenets:
 
 1.  **Plain Text over Software as a Service (SaaS):** Decisions should be recorded in portable, universal formats, such as *.Comma-Separated Values (CSV), *.Markdown (MD), or even pen and paper. Not locked in proprietary tools.
 2.  **Return over Abstraction:** We prioritize tangible financial outcomes over abstract complexity points (e.g., magic numbers or subjective scores).
@@ -16,16 +16,16 @@ Standard frameworks collapse variables into a single abstract number. CORE uses 
 
 | Approach | Statement | Impact |
 | :--- | :--- | :--- |
-| **Gut Feel** | "I think this is a good idea." | Subjective bias; HiPPO decisions. |
-| **CORE Method** | "This has High Return and High Confidence." | Objective, calculated prioritization. |
+| **Gut Feel** | *"I think this is a good idea."* | Subjective bias: decisions based on the Highest Paid Person's Opinion (HiPPO). |
+| **CORE Method** | *"This has High Return and High Confidence."* | Objective, calculated prioritization. |
 
 ### vs. The Alternatives
 
 | Framework | Focus | Blind Spot | CORE Solution |
 |-----------|-------|------------|---------------|
-| **MoSCoW** | Requirements Scope (MoSCoW) | Ignores profitability/ROI. | Explicit **Return** metric. |
-| **RICE** | Prioritization Score (RICE) | Blends risk & value into one number. | Separates **Confidence** from **Outcome**. |
-| **WSJF** | Cost of Delay (WSJF) | Abstract math; guesswork. | Concrete **Efficiency Score** ($ per Day). |
+| **MoSCoW** | Requirements Scope | Ignores profitability/Return on Investment (ROI). | Explicit **Return** metric. |
+| **RICE** | Prioritization Score | Blends risk & value into one number. | Separates **Confidence** from **Outcome**. |
+| **WSJF** | Cost of Delay | Abstract math; guesswork. | Concrete **Efficiency Score** (Currency per Day). |
 
 ## The CORE Framework
 
@@ -33,10 +33,10 @@ CORE stands for **C**onfidence, **O**utcome, **R**eturn, and **E**ffort. These f
 
 | Attribute | Question | Focus |
 |-----------|----------|-------|
-| **C**onfidence | *Can we do it?* | Feasibility, risk, competency. |
-| **O**utcome | *Should we do it?* | Strategy, safety, compliance. |
-| **R**eturn | *Is it profitable?* | ROI, efficiency, cash. |
-| **E**ffort | *What does it cost?* | Labor, days, budget. |
+| **C**onfidence | *"Can we do it?"* | Feasibility, risk, competency. |
+| **O**utcome | *"Should we do it?"* | Strategy, safety, compliance. |
+| **R**eturn | *"Is it profitable?"* | ROI, efficiency, cash. |
+| **E**ffort | *"What does it cost?"* | Labor, days, budget. |
 
 ### Responsibility Model
 
@@ -44,7 +44,7 @@ CORE stands for **C**onfidence, **O**utcome, **R**eturn, and **E**ffort. These f
 | :--- | :--- |
 | **Confidence** | Tech Lead / Senior Engineer |
 | **Outcome** | Product Manager / Strategist |
-| **Return** | CFO / Business Analyst |
+| **Return** | Chief Financial Officer (CFO)  / Business Analyst |
 | **Effort** | Project Manager / Team Lead |
 
 ## Operating Logic
@@ -68,7 +68,7 @@ The CORE Method uses specific calculations to drive objective prioritization.
 Before finalizing the prioritization, perform the following check:
 
 * **If Strategy (Outcome) is "Avoid" and Return is Low:** The project is a distraction. Do not execute.
-* **If Duration < (Work Days / Required FTE):** The timeline is physically impossible. Adjust either the scope, the labor, or the deadline.
+* **If Duration < (Work Days / Required Full Time Equivalent (FTE)):** The timeline is physically impossible. Adjust either the scope, the labor, or the deadline.
 * **If Work Days are unknown:** The "Confidence" score is a guess. Move the project back to the research phase.
 
 ## Data Structure
@@ -90,11 +90,11 @@ The single source of truth for all projects.
 | **Confidence Score** | Technical Feasibility (1-5). | **5:** Routine, **3:** Unknowns, **1:** High Risk |
 | **Outcome Score** | Strategic Impact (1-5). | **5:** Critical, **3:** Strong Feature, **1:** Nice to have |
 | **Urgency Score** | Time Sensitivity Multiplier. | **2.0:** Critical Deadline, **1.0:** Standard, **0.5:** Deferrable |
-| **Work Days** | Total effort required (Man-days). | *Payroll Driver* |
+| **Work Days** | Total effort required (Man-days). | Payroll Driver |
 | **Required FTE** | Intensity of resource allocation. | e.g., `0.5` (half speed), `2.0` (two people) |
 | **Duration** | Calendar days to delivery. | `(Work Days / FTE) + Wait Time + Weekends` |
 | **Total Cost** | Full cost (Labor + Direct). | `(Work Days * Blended Daily Rate) + External Costs` |
-| **Monthly Benefit** | Expected monthly value. | Revenue increase or Cost savings post-launch |
+| **Monthly Benefit** | Expected monthly value. | Revenue increase or Cost savings after implementation |
 | **Project Score** | Strategic Fit Sum. | `Confidence Score + Outcome Score` |
 | **Efficiency Score** | Financial Return per Day. | `((Monthly Benefit * 36) - Total Cost) / Work Days` |
 
@@ -113,13 +113,13 @@ The CORE Method is tool-agnostic. It applies to any spreadsheet, database, or te
 
 ### Example 1: Software (Migration)
 
-**Context:** Determine if we should migrate legacy Postgres to RDS.
+**Context:** Determine if we should migrate legacy Postgres to Relational Database Service (RDS).
 
 **CSV Entry:**
 
 | Column | Value | Notes |
 | :--- | :--- | :--- |
-| **Title** | `INFRA-2024-01` | |
+| **Title** | `‌OKTO-1010 Database Migration` | |
 | **Confidence** | `4` | High, but some data risk. |
 | **Outcome** | `4` | Critical for scaling. |
 | **Urgency** | `1.0` | Standard. |
@@ -137,7 +137,7 @@ The CORE Method is tool-agnostic. It applies to any spreadsheet, database, or te
 
 | Column | Value | Notes |
 | :--- | :--- | :--- |
-| **Title** | `CAPEX-9921` | |
+| **Title** | `OKTO-1011 5-Axis CNC Procurement` | |
 | **Confidence** | `5` | Vendor installation. |
 | **Outcome** | `5` | Line 4 is down without it. |
 | **Urgency** | `1.0` | Standard. |
@@ -149,14 +149,14 @@ The CORE Method is tool-agnostic. It applies to any spreadsheet, database, or te
 
 ## Common Questions
 
-*   **"What if I don't have a CFO?"**
-    *   Assign the "Return" attribute to the business stakeholder closest to the money. The goal is logical consistency, not forensic accounting accuracy.
-
 *   **"Why is Urgency a multiplier?"**
     *   To prevent "Urgency Bias." If we just added points, a useless project (Outcome 1) due tomorrow (+5) would beat a strategic game-changer (Outcome 5) due next month (+1). Multiplication ensures that zero-value projects remain zero, regardless of the deadline.
 
 *   **"What if I am a solo entrepreneur?"**
     *   You are all the Archetypes. However, you must score "Return" while wearing your "Business Owner" hat, strictly separating it from your "Engineer" excitement (Confidence) or "Product" vision (Outcome).
+    *   
+*   **"What if I don't have a CFO?"**
+    *   Assign the "Return" attribute to the business stakeholder closest to the money. The goal is logical consistency, not forensic accounting accuracy.
 
 *   **"Why plain text (CSV)?"**
     *   Complexity prevents transparency. Proprietary tools hide logic behind paywalls. CSVs are universal, version-controllable, and force focus on the data, not the tool.
@@ -171,6 +171,7 @@ The CORE Method is tool-agnostic. It applies to any spreadsheet, database, or te
 | **CFO** | Chief Financial Officer |
 | **CORE** | Confidence, Outcome, Return, Effort |
 | **CSV** | Comma-Separated Values |
+| **HiPPO** | Highest Paid Person's Opinion |
 | **FTE** | Full-Time Equivalent |
 | **MD** | Markdown |
 | **MoSCoW** | Must have, Should have, Could have, Won't have |
