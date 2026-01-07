@@ -6,8 +6,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+- "Decision Matrix" to Operating Logic (Unicorn, Cash Cow, Strategy, Distraction).
+- "Making the Decision" section clarifying "Gatekeeper" (Selection) vs "Ranker" (Scheduling) roles.
+- "Prioritization vs. Scheduling" disclaimer to ensure objectivity.
+- Explicit "Wait Time" examples (Lead Time, Shipment) to the Duration formula.
+
 ### Changed
 - Refine core philosophy, definitions, and examples in README.
+- Updated "Project Score" formula to explicitly include Urgency multiplier (Max 20).
+- Renamed "Deadline" to "Urgency" in Integrity Check to align with prioritization focus.
+- Removed "Wait Time" as a dedicated column from Data Structure and Examples (retained in Duration calculation).
+- Expanded "Description" and "Conclusion" definitions in Project Assessment to enforce stricter rules (min/max sentences, detailed reasoning).
+- Rewrote Example 1 and Example 2 to provide substantial context and justification.
+
+### Fixed
+- Duplicate text in Operating Logic.
+- Hidden character typo in Example 1 title.
+- Missing columns in Examples 1 and 2 (Description, Owner, Status, Conclusion, FTE).
 
 ## [0.2.0] - 2026-01-04
 
