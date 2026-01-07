@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - "Making the Decision" section clarifying "Gatekeeper" (Selection) vs "Ranker" (Scheduling) roles.
 - "Prioritization vs. Scheduling" disclaimer to ensure objectivity.
 - Explicit "Wait Time" examples (Lead Time, Shipment) to the Duration formula.
+- "Added By", "Checked By", and "Approved By" fields to Project Assessment for auditability.
 
 ### Changed
 - Refine core philosophy, definitions, and examples in README.
@@ -23,7 +24,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Fixed
 - Duplicate text in Operating Logic.
 - Hidden character typo in Example 1 title.
-- Missing columns in Examples 1 and 2 (Description, Owner, Status, Conclusion, FTE).
+- Missing columns in Examples 1 and 2 (Description, Conclusion, FTE).
+
+### Removed
+- "Owner" and "Status" fields from Project Assessment to strictly separate prioritization from scheduling/execution.
 
 ## [0.2.0] - 2026-01-04
 
