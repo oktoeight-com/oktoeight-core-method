@@ -95,8 +95,9 @@ The single source of truth for all projects.
 |--------|-------------|----------|
 | **Title** | Unique identifier. | e.g., "OKTO-1001" |
 | **Description** | Brief summary. | Min 3 sentences. Max 6 sentences. Define scope clearly. |
-| **Owner** | Full Name of responsible person. | e.g., "Albert Leris" |
-| **Status** | Project state. | `Draft`, `Scheduled`, `Ongoing`, `Completed`, `On Hold` |
+| **Added By** | Person who proposed the project. | e.g., "Albert Leris" |
+| **Checked By** | Person who verified the data. | e.g., "Peer Reviewer" |
+| **Approved By** | Person who authorized the project. | e.g., "Steering Committee" |
 | **Conclusion** | Final verdict + reasoning. | Detailed reasoning linking score to verdict. |
 | **Confidence Score** | Technical Feasibility (1-5). | **5:** Routine, **3:** Unknowns, **1:** High Risk |
 | **Outcome Score** | Strategic Impact (1-5). | **5:** Critical, **3:** Strong Feature, **1:** Nice to have |
@@ -124,8 +125,9 @@ The CORE Method is tool-agnostic. It applies to any spreadsheet, database, or te
 | :--- | :--- | :--- |
 | **Title** | `OKTO-1010 Database Migration` | |
 | **Description** | The current Postgres instance on legacy hardware is reaching capacity limits during peak hours (95% CPU). Migration to RDS will automate backups, enable auto-scaling, and reduce maintenance overhead. This project covers the migration of the core 'Orders' database, but excludes the archive service. | |
-| **Owner** | `Albert Leris` | |
-| **Status** | `Draft` | |
+| **Added By** | `Albert Leris` | |
+| **Checked By** | `Amata Almodovar` | |
+| **Approved By** | `Stanislaus Braun` | |
 | **Conclusion** | Viable. The project returns a positive efficiency score ($1,300/day) and addresses a critical outcome (Scale). Confidence matches the complexity. Approved for immediate scheduling. | |
 | **Confidence** | `4` | High, but some data risk. |
 | **Outcome** | `4` | Critical for scaling. |
@@ -148,8 +150,9 @@ The CORE Method is tool-agnostic. It applies to any spreadsheet, database, or te
 | :--- | :--- | :--- |
 | **Title** | `OKTO-1011 5-Axis CNC Procurement` | |
 | **Description** | Unit #4 has failed three times this month, causing 42 hours of cumulative downtime. Repair costs are escalating, and parts are becoming obsolete. Replacing this unit with a modern 5-axis equivalent ensures production continuity for Line 4 and increases throughput by 15%. | |
-| **Owner** | `Hank MacLean` | |
-| **Status** | `Scheduled` | |
+| **Added By** | `Hank MacLean` | |
+| **Checked By** | `Valery Barstow` | |
+| **Approved By** | `Gwen McNamara` | |
 | **Conclusion** | Viable. This is a classic 'Cash Cow'. While the strategic innovation is moderate, the financial return is massive ($6,000/day efficiency). The downtime risk makes this urgent. | |
 | **Confidence** | `5` | Vendor installation. |
 | **Outcome** | `5` | Line 4 is down without it. |
