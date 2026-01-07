@@ -11,7 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - "Making the Decision" section clarifying "Gatekeeper" (Selection) vs "Ranker" (Scheduling) roles.
 - "Prioritization vs. Scheduling" disclaimer to ensure objectivity.
 - Explicit "Wait Time" examples (Lead Time, Shipment) to the Duration formula.
-- "Added By", "Checked By", and "Approved By" fields to Project Assessment for auditability.
+- "Created By", "Checked By", and "Approved By" fields to Project Assessment for auditability.
 
 ### Changed
 - Refine core philosophy, definitions, and examples in README.
