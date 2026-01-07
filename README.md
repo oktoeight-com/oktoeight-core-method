@@ -95,7 +95,7 @@ The single source of truth for all projects.
 |--------|-------------|----------|
 | **Title** | Unique identifier. | e.g., "OKTO-1001" |
 | **Description** | Brief summary. | Min 3 sentences. Max 6 sentences. Define scope clearly. |
-| **Added By** | Person who proposed the project. | e.g., "Albert Leris" |
+| **Created By** | Person who created the project. | e.g., "Albert Leris" |
 | **Checked By** | Person who verified the data. | e.g., "Peer Reviewer" |
 | **Approved By** | Person who authorized the project. | e.g., "Steering Committee" |
 | **Conclusion** | Final verdict + reasoning. | Detailed reasoning linking score to verdict. |
