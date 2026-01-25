@@ -172,7 +172,7 @@ The CORE Method is tool-agnostic. It applies to any spreadsheet, database, or te
 
 *   **"What if I am a solo entrepreneur?"**
     *   You are all the Archetypes. However, you must score "Return" while wearing your "Business Owner" hat, strictly separating it from your "Engineer" excitement (Confidence) or "Product" vision (Outcome).
-    *   
+      
 *   **"What if I don't have a CFO?"**
     *   Assign the "Return" attribute to the business stakeholder closest to the money. The goal is logical consistency, not forensic accounting accuracy.
 
